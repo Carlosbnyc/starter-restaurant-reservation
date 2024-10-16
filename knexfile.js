@@ -6,13 +6,13 @@
 module.exports = {
 
   development: {
-    client: 'pg', // 'pg' is the Knex client for PostgreSQL
+    client: 'pg', 
     connection: {
-      host: 'dpg-cs022blds78s738e9umg-a', // Hostname from your screenshot
-      port: 5432, // Default PostgreSQL port
-      user: 'dev_mrjb_user', // Username from your screenshot
-      password: 'aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF', // Password from your screenshot
-      database: 'dev_mrjb', // Database name from your screenshot
+      host: 'dpg-cs022blds78s738e9umg-a',
+      port: 5432, 
+      user: 'dev_mrjb_user', 
+      password: 'aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF', 
+      database: 'dev_mrjb',
     },
     migrations: {
       directory: './back-end/src/db/migrations', // Folder for migrations
