@@ -11,20 +11,13 @@ const reservationsRouter = require("./reservations/reservations.router");
 const tablesRouter = require("./tables/tables.router");
 
 const app = express();
-const corsOptions = {
-    origin: 'http://localhost:3000', // Your React frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
-    credentials: true, // Set to true if your API uses cookies or sessions
-  };
-  
-  // Apply CORS with the specified options
-  app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 app.options("*", cors());
 
 app.use("/reservations", reservationsRouter);
 app.use("/tables", tablesRouter);
-
 
 app.use(notFound);
 app.use(errorHandler);
