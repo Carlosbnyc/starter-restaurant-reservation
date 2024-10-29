@@ -29,15 +29,13 @@ function hasValidName(req, res, next) {
 }
 
 function hasValidCapacity(req, res, next) {
-  const capacity = req.body.data.capacity;
-
+  const { capacity } = req.body.data;
   if (capacity < 1 || isNaN(capacity)) {
     return next({
       status: 400,
-      message: 'capacity must be a positive number',
+      message: "capacity must be a positive number",
     });
   }
-  
   next();
 }
 
