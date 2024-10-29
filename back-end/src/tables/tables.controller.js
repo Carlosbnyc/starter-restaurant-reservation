@@ -32,11 +32,13 @@ function hasValidCapacity(req, res, next) {
   const capacity = req.body.data.capacity;
 
   if (capacity < 1 || isNaN(capacity)) {
+    console.log("Invalid capacity detected");  // Add this for debugging
     return next({
       status: 400,
-      message: `Invalid capacity`,
+      message: 'capacity must be a positive number',
     });
   }
+  
   next();
 }
 

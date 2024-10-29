@@ -4,7 +4,7 @@ const methodNotAllowed = require("../errors/methodNotAllowed");
 
 router
   .route("/")
-  .post(controller.create)
+  .post(controller.hasValidCapacity, controller.create)
   .get(controller.list)
   .all(methodNotAllowed);
 
@@ -13,5 +13,7 @@ router
   .put(controller.update)
   .delete(controller.finish)
   .all(methodNotAllowed);
+
+  console.log(controller.create);  // Add this to verify the function exists
 
 module.exports = router;
