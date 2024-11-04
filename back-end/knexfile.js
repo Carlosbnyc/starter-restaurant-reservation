@@ -10,12 +10,12 @@ console.log("DATABASE_URL_PREVIEW:", process.env.DATABASE_URL_PREVIEW);
 console.log("LOG_LEVEL:", process.env.LOG_LEVEL);
 
 const {
-  DATABASE_URL = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_DEVELOPMENT = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_TEST,
-  DATABASE_URL_PREVIEW,
+  DATABASE_URL = "postgresql://dev_mrjb_user:aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF@dpg-cs022blds78s738e9umg-a.ohio-postgres.render.com/dev_mrjb?ssl=true",
+  DATABASE_URL_DEVELOPMENT = "postgresql://dev_mrjb_user:aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF@dpg-cs022blds78s738e9umg-a.ohio-postgres.render.com/dev_mrjb?ssl=true",
+  DATABASE_URL_TEST = "postgresql://dev_mrjb_user:aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF@dpg-cs022blds78s738e9umg-a.ohio-postgres.render.com/dev_mrjb?ssl=true",
+  DATABASE_URL_PREVIEW = "postgresql://dev_mrjb_user:aMAAUYERxeBNnje9MHfF0pU0YPWp8gQF@dpg-cs022blds78s738e9umg-a.ohio-postgres.render.com/dev_mrjb?ssl=true",
   DEBUG,
-} = process.env;
+} = process.env
 
 module.exports = {
   development: {
