@@ -1,17 +1,19 @@
-/**
- * Knex configuration file.
- *
- * You will not need to make changes to this file.
- */
-
 require('dotenv').config();
 const path = require("path");
+
+// Logging environment variables for debugging
+console.log("Environment Variables Loaded:");
+console.log("DATABASE_URL:", process.env.DATABASE_URL);
+console.log("DATABASE_URL_DEVELOPMENT:", process.env.DATABASE_URL_DEVELOPMENT);
+console.log("DATABASE_URL_TEST:", process.env.DATABASE_URL_TEST);
+console.log("DATABASE_URL_PREVIEW:", process.env.DATABASE_URL_PREVIEW);
+console.log("LOG_LEVEL:", process.env.LOG_LEVEL);
 
 const {
   DATABASE_URL = "postgresql://postgres@localhost/postgres",
   DATABASE_URL_DEVELOPMENT = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_TEST = "postgresql://postgres@localhost/postgres",
-  DATABASE_URL_PREVIEW = "postgresql://postgres@localhost/postgres",
+  DATABASE_URL_TEST,
+  DATABASE_URL_PREVIEW,
   DEBUG,
 } = process.env;
 
